@@ -18,11 +18,11 @@ export default class SmallBox extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="grid">
         <div className="song-list row">
           {this.state.data.songs.map((el) => {
             return (
-              <div className="large-box col opacity" key={el._id}>
+              <div className="large-box grid-box opacity" key={el._id}>
                 <LazyLoad once={el.once} key={el._id} height={200} offset={[-200, 0]}>
                   <Box songId={el._id} imgUrl={el.imgURL}/>
                 </LazyLoad>

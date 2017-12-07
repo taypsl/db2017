@@ -32,31 +32,114 @@ $black: #000000;
   }
 }
 
-// Box
-.box {
+// =============================
+// responsive grid
+// =============================
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
+.box h1 {
+  position: absolute;
+  margin: 0.5rem 3rem;
+}
+
+div.box {
   display: flex;
+}
+
+.small-box {
+  font-family: $font-family-sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.small-box img {
+  height: 230px;
   width: 100%;
-  height: 100%;
-  img {
+}
 
-    object-fit: contain;
+.medium-box {
+  
+}
+
+
+@media screen and (min-width: 300px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-  align-items: center;
-  justify-content: center;
+  .small-box {
+    width: 50%;
+    img {
+      height: 180px; 
+    }
+  }
+  .box h1 {
+    margin: 0.5rem 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .small-box {
+    width: calc(100% / 3);
+    img {
+      height: 230px;
+    }
+    .box h1 {
+      margin: 1.8rem 3rem;
+    }
+  }
 }
 
-.box:hover {
-  cursor: pointer
+@media screen and (min-width: 800px) {
+  .small-box {
+    width: calc(100% / 4);
+    .box h1 {
+      margin: 1.8rem 3rem;
+    }
+  }
 }
 
-.opacity {
-  opacity: 0.4
+@media screen and (min-width: 1000px) {
+  .small-box {
+    width: calc(100% / 5);
+  }
+}
+/*
+// tryign something new: this is the old code.
+// =======================
+// Responsive Grid 
+// =======================
+.grid {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.opacity:hover {
-  opacity: 1;
+.grid-box {
+  flex: 1 1 auto;
+  background: tomato;
+  color: white;
+  border: 0.5px solid white;
+  // font-family: $font-family-sans-serif;
+  // font-weight: 800;
 }
 
+// =======================
+// Box Styles
+// =======================
 // Small Box
 .small-box {
   min-width: 230px;
@@ -78,25 +161,29 @@ $black: #000000;
   font-size: 5.5rem;
 }
 
-// Responsive Grid 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+// Box
+.box {
+  display: flex; // this makes the font center itself
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.col {
-  // flex: 1 1 20%; 
-  flex: 1 1 auto;
-  background: tomato;
-  color: white;
-  border: 0.5px solid white;
-  display: flex;
-  // align-items: center;
-  // justify-content: center;
-  font-family: $font-family-sans-serif;
-  font-weight: 800;
-
+.box:hover {
+  cursor: pointer
 }
 
+.responsive-img {
+  max-width: 100%;
+}
+*/
+// =======================
+// Opacity Styles
+// =======================
+.opacity {
+  opacity: 0.4
+}
 
+.opacity:hover {
+  opacity: 1;
+}
