@@ -4,5 +4,11 @@ import './css/index.css';
 import AppRoutes from './AppRoutes';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<AppRoutes />, document.getElementById('root'));
+import ReactModal from 'react-modal';
+
+ReactModal.setAppElement('#root');
+
+const props = {};
+
+ReactDOM.render(<AppRoutes {...props} />, document.getElementById('root'));
 registerServiceWorker();

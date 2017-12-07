@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../css/App.css';
 
 export default class Sidebar extends Component {
 
@@ -9,13 +8,13 @@ export default class Sidebar extends Component {
         <div className="close"></div>
         <div className="player"></div>
         <div className="song-title-wrapper">
-        	<div className="number"></div>
+        	<div className="number">{this.props._id}</div>
         	<div className="title">
         		<div className="song-title">{this.props.title}</div>
-        		<div className="artist">{this.props.title}</div>
+        		<div className="artist">{this.props.artist}</div>
         	</div>
         	<hr />
-        	<p className="description">this.props.description</p>
+        	<p className="description">{this.props.description}</p>
         </div>
       </div>
     );

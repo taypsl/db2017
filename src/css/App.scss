@@ -37,7 +37,7 @@ $black: #000000;
 // =============================
 .wrapper {
   margin: 0 auto;
-  max-width: 1200px;
+  // max-width: 1200px;
   padding: 0;
 }
 
@@ -57,7 +57,7 @@ div.box {
 .small-box {
   font-family: $font-family-sans-serif;
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 3rem;
   // text-align: center;
   img {
     height: 230px;
@@ -74,10 +74,10 @@ div.box {
 }
 
 .large-box {
-  font-size: 5.5rem;
+  font-size: 8.5rem;
   img {
-    height: 800px;
-    width: 100%;
+    height: 800px; 
+    width: 100vw;
   }
 }
 
@@ -98,7 +98,7 @@ div.box {
   }
 
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .grid {
     display: flex;
     flex-wrap: wrap;
@@ -107,7 +107,7 @@ div.box {
   .small-box {
     width: calc(100% / 3);
     img {
-      height: 230px;
+      height: 33%;
     }
     .box h1 {
       margin: 1.8rem 3rem;
@@ -116,84 +116,50 @@ div.box {
   .medium-box {
     width: 50%;
     img {
-      height: 400px; 
+      height: 50%; 
     }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .small-box {
+    width: calc(100% / 4);
+    img {
+      height: 25%;
+    }
+    .box h1 {
+      margin: 1.8rem 3rem;
+    }
+  }
+  .wrapper {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 800px) {
   .small-box {
-    width: calc(100% / 4);
+    width: calc(100% / 5);
+    img {
+      height: 20%;
+    }
     .box h1 {
       margin: 1.8rem 3rem;
     }
+  }
+  .wrapper {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .small-box {
-    width: calc(100% / 5);
+    width: calc(100% / 6);
+    img {
+      height: 17%
+    }
   }
 }
-/*
-// tryign something new: this is the old code.
-// =======================
-// Responsive Grid 
-// =======================
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.grid-box {
-  flex: 1 1 auto;
-  background: tomato;
-  color: white;
-  border: 0.5px solid white;
-  // font-family: $font-family-sans-serif;
-  // font-weight: 800;
-}
-
-// =======================
-// Box Styles
-// =======================
-// Small Box
-.small-box {
-  min-width: 230px;
-  height: 230px;
-  font-size: 3.5rem;
-}
-
-// Medium Box
-.medium-box {
-  min-width: 400px;
-  height: 400px;
-  font-size: 4.5rem;
-}
-
-// Large Box
-.large-box {
-  min-width: 800px;
-  height: 800px;
-  font-size: 5.5rem;
-}
-
-// Box
-.box {
-  display: flex; // this makes the font center itself
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.box:hover {
-  cursor: pointer
-}
-
-.responsive-img {
-  max-width: 100%;
-}
-*/
 // =======================
 // Opacity Styles
 // =======================
@@ -204,3 +170,41 @@ div.box {
 .opacity:hover {
   opacity: 1;
 }
+
+// =======================
+// Modal 
+// =======================
+.Modal {
+  position: absolute;
+  top: 0;
+  // left: 40px;
+  right: 0;
+  bottom: 0;
+  background-color: $black;
+  opacity: 1;
+  width: 430px;
+  height: 100vh;
+}
+
+.Modal:focus {
+  outline: 0;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $black;
+  opacity: 1;
+  width: 430px;
+  height: 100vh;
+}
+
+.sidebar {
+  font-size: 2rem;
+  color: $white;
+}
+
+
