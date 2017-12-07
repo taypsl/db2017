@@ -6,6 +6,7 @@ import siteData from '../data/songs50-21.json'
 
 import Modal from 'react-modal';
 import Sidebar from './sidebar/Sidebar.js';
+import Close from '../img/icn_close.svg';
 
 class SmallBox extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class SmallBox extends Component {
   }
 
   handleOpenModal = (e, el) => {
-    console.log('open', el)
+    // console.log('open', el)
     this.setState({ 
     	showModal: true,
     	currentSong: el
@@ -28,12 +29,12 @@ class SmallBox extends Component {
   }
   
   handleCloseModal () {
-  	console.log('close')
+  	// console.log('close')
     this.setState({ showModal: false });
   }
 
   componentDidMount() {
-    console.log('small', this.state.data)
+    // console.log('small', this.state.data)
   }
 
   render() {
@@ -45,14 +46,14 @@ class SmallBox extends Component {
           className="Modal"
           overlayClassName="Overlay"
 	      >
-	      	<button onClick={this.handleCloseModal}>Close Modal</button>
+	      	<div className="button" onClick={this.handleCloseModal}><img src={Close} alt="close modal" /></div>
 	      	<Sidebar 
 	      		title={this.state.currentSong.title}
 	      		artist={this.state.currentSong.artist}
 	      		description={this.state.currentSong.description}
 	      		_id={this.state.currentSong._id}
+	      		songURL={this.state.currentSong.songURL}
 	      	/>
-
 	      </Modal>
 
         <div className="song-list grid">

@@ -3,6 +3,7 @@ $font-family-sans-serif: "Open Sans", sans-serif;
 
 $white: #ffffff;
 $black: #000000;
+$light-grey: #cccccc;
 
 .App {
   background-color: $black;
@@ -12,23 +13,54 @@ $black: #000000;
 }
 
 .Home {
+  height: 100vh;
   text-align: center;
-  h1 {
-    font-family: $font-family-serif;
+  // h1 {
+  //   font-family: $font-family-serif;
+  // }
+}
+
+.Home-wrapper {
+  text-align: justify;
+  padding: 2rem;
+  // h1 {
+  //   font-size: 2.8rem;
+  // }
+  p {
+    font-size: 0.9rem;
   }
 }
 
+a, .page-links {
+  color: $white;
+  text-decoration: none;
+}
+
+a:hover, .page-links:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited, .page-links:visited {
+  text-decoration: none;
+  color: $light-grey;
+}
+
 .Navbar {
-  a {
-    color: $white;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  display: flex;
   .Navbar-logo {
     font-family: $font-family-serif;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+  .Navbar-links {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    .Navbar-link {
+      padding: 0 1.5rem;
+    }
   }
 }
 
@@ -81,6 +113,23 @@ div.box {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .Navbar {
+    position: static;
+    display: block;
+    left: 2rem;
+    top: 2rem;
+    text-align: center;
+    .Navbar-links, .Navbar-logo {
+      position: static;
+    }
+    .Navbar-logo {
+      padding-top: 2rem;
+    }
+  }
+  
+}
+
 @media screen and (min-width: 300px) {
   .grid {
     display: flex;
@@ -96,8 +145,8 @@ div.box {
   .box h1 {
     margin: 0.5rem 1.5rem;
   }
-
 }
+
 @media screen and (min-width: 500px) {
   .grid {
     display: flex;
@@ -119,6 +168,9 @@ div.box {
       height: 50%; 
     }
   }
+  .Home-wrapper {
+    padding: 3rem 5rem;
+  } 
 }
 
 @media screen and (min-width: 650px) {
@@ -134,20 +186,23 @@ div.box {
   .wrapper {
     margin: 0;
   }
+  .Home-wrapper {
+    padding: 6rem 8rem;
+  } 
 }
 
-@media screen and (min-width: 800px) {
-  .small-box {
-    width: calc(100% / 5);
-    img {
-      height: 20%;
-    }
-    .box h1 {
-      margin: 1.8rem 3rem;
-    }
-  }
+@media screen and (min-width: 720px) {
   .wrapper {
     margin: 0;
+  }
+  .Home-wrapper {
+    padding: 8rem 10rem;
+  } 
+}
+
+@media screen and (min-width: 860px) {
+  .Home-wrapper {
+    padding: 8rem 13rem;
   }
 }
 
@@ -158,6 +213,9 @@ div.box {
       height: 17%
     }
   }
+  .Home-wrapper {
+    padding: 10rem 16rem;
+  } 
 }
 
 // =======================
@@ -171,9 +229,9 @@ div.box {
   opacity: 1;
 }
 
-// =======================
-// Modal 
-// =======================
+// =========================
+// Modal / sidebar / player
+// =========================
 .Modal {
   position: absolute;
   top: 0;
@@ -190,6 +248,17 @@ div.box {
   outline: 0;
 }
 
+.button img {
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  width: 33px;
+  height: 33px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
 .Overlay {
   position: fixed;
   top: 0;
@@ -200,11 +269,57 @@ div.box {
   opacity: 1;
   width: 430px;
   height: 100vh;
+  overflow: scroll;
 }
 
-.sidebar {
+// Sidebar
+.Sidebar {
+  font-family: $font-family-sans-serif;
+  padding: 1.5rem 2rem;
   font-size: 2rem;
   color: $white;
 }
 
+.player-container {
+}
+
+.song-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar-number {
+  align-self: flex-start;
+  font-family: $font-family-sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.sidebar-title {
+  align-self: flex-start;
+  margin-left: 1.3rem;
+}
+
+.sidebar-song-title {
+  margin: 1.2rem 0 0 0;
+  padding: 0;
+  font-family: $font-family-serif;
+  font-size: 1.4rem;
+  -webkit-text-stroke: 1px $white;
+  top:0;
+
+}
+
+.sidebar-artist {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.sidebar-line {
+  margin-top: 0;
+}
+
+.sidebar-description {
+  font-size: 1rem;
+}
 

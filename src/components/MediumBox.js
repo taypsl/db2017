@@ -20,7 +20,7 @@ export default class MediumBox extends Component {
   }
 
   handleOpenModal = (e, el) => {
-    console.log('open', el)
+    // console.log('open', el)
     this.setState({ 
       showModal: true,
       currentSong: el
@@ -28,12 +28,12 @@ export default class MediumBox extends Component {
   }
   
   handleCloseModal () {
-    console.log('close')
+    // console.log('close')
     this.setState({ showModal: false });
   }
 
   componentDidMount() {
-    console.log('medium', this.state)
+    // console.log('medium', this.state)
   }
 
   render() {
@@ -51,6 +51,7 @@ export default class MediumBox extends Component {
             artist={this.state.currentSong.artist}
             description={this.state.currentSong.description}
             _id={this.state.currentSong._id}
+            songURL={this.state.currentSong.songURL}
           />  
         </Modal>
 

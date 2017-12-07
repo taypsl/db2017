@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hone from './components/Home';
+import Home from './components/Home';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
