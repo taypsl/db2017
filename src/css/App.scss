@@ -58,18 +58,28 @@ div.box {
   font-family: $font-family-sans-serif;
   font-weight: 800;
   font-size: 3.5rem;
-  text-align: center;
-}
-
-.small-box img {
-  height: 230px;
-  width: 100%;
+  // text-align: center;
+  img {
+    height: 230px;
+    width: 100%;
+  }
 }
 
 .medium-box {
-  
+  font-size: 4.5rem;
+  img {
+    height: 400px;
+    width: 100%;
+  }
 }
 
+.large-box {
+  font-size: 5.5rem;
+  img {
+    height: 800px;
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 300px) {
   .grid {
@@ -86,6 +96,7 @@ div.box {
   .box h1 {
     margin: 0.5rem 1.5rem;
   }
+
 }
 @media screen and (min-width: 600px) {
   .grid {
@@ -100,6 +111,12 @@ div.box {
     }
     .box h1 {
       margin: 1.8rem 3rem;
+    }
+  }
+  .medium-box {
+    width: 50%;
+    img {
+      height: 400px; 
     }
   }
 }

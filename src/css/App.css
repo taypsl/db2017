@@ -38,12 +38,22 @@ div.box {
 .small-box {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
-  font-size: 3.5rem;
-  text-align: center; }
+  font-size: 3.5rem; }
+  .small-box img {
+    height: 230px;
+    width: 100%; }
 
-.small-box img {
-  height: 230px;
-  width: 100%; }
+.medium-box {
+  font-size: 4.5rem; }
+  .medium-box img {
+    height: 400px;
+    width: 100%; }
+
+.large-box {
+  font-size: 5.5rem; }
+  .large-box img {
+    height: 800px;
+    width: 100%; }
 
 @media screen and (min-width: 300px) {
   .grid {
@@ -67,7 +77,11 @@ div.box {
     .small-box img {
       height: 230px; }
     .small-box .box h1 {
-      margin: 1.8rem 3rem; } }
+      margin: 1.8rem 3rem; }
+  .medium-box {
+    width: 50%; }
+    .medium-box img {
+      height: 400px; } }
 
 @media screen and (min-width: 800px) {
   .small-box {

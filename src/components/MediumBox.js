@@ -20,8 +20,8 @@ export default class MediumBox extends Component {
 
   render() {
     return (
-      <div className="grid">
-        <div className="song-list row">
+      <div className="wrapper">
+        <div className="song-list grid">
           {this.state.data.songs.map((el) => {
             return (
               <div className="medium-box grid-box opacity" key={el._id}>
