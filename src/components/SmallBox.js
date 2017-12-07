@@ -7,6 +7,7 @@ import siteData from '../data/songs50-21.json'
 import Modal from 'react-modal';
 import Sidebar from './sidebar/Sidebar.js';
 import Close from '../img/icn_close.svg';
+import RightArrow from '../img/arrow-r-line.svg';
 
 class SmallBox extends Component {
   constructor() {
@@ -40,6 +41,7 @@ class SmallBox extends Component {
   render() {
     return (
       <div className="wrapper">
+
 	      <Modal 
 	      	isOpen={this.state.showModal}
           contentLabel="Minimal Modal Example"
@@ -71,7 +73,14 @@ class SmallBox extends Component {
             )
           })}
         </div>
-        <a href="/20-11">20-11</a>
+        <div className="page-navigation">
+          <a href="/20-11">
+            <div className="page-link">
+              <img src={RightArrow} alt="next page"/>
+              <p>20-11</p>
+            </div>
+          </a>
+        </div>
       </div>
     );
   }

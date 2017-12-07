@@ -6,8 +6,8 @@ class VideoPlayer extends Component {
     return (
     	<ReactPlayer 
     		url={this.props.url}
-    		width="362px"
-    		height="240px"
+    		width="340px"
+    		height="220px"
     	/>
   	)
   }

@@ -4,6 +4,8 @@ import '../css/App.css';
 import siteData from '../data/songs10-1.json'
 import Box from './Box'
 import Sidebar from './sidebar/Sidebar.js';
+import LeftArrow from '../img/arrow-l-line.svg';
+import Close from '../img/icn_close.svg';
 
 import Modal from 'react-modal';
 
@@ -45,7 +47,7 @@ export default class SmallBox extends Component {
           className="Modal"
           overlayClassName="Overlay"
         >
-          <button onClick={this.handleCloseModal}>Close Modal</button>
+          <div className="button" onClick={this.handleCloseModal}><img src={Close} alt="close modal" /></div>
           <Sidebar 
             title={this.state.currentSong.title}
             artist={this.state.currentSong.artist}
@@ -69,6 +71,14 @@ export default class SmallBox extends Component {
               </div>
             )
           })}
+        </div>
+        <div className="page-navigation">
+          <a href="/20-11">
+            <div className="page-link">
+              <img src={LeftArrow} alt="previous page"/>
+              <p>20-11</p>
+            </div>
+          </a>
         </div>
       </div>
     );

@@ -4,6 +4,9 @@ import '../css/App.css';
 import Box from './Box'
 import siteData from '../data/songs20-11.json'
 import Sidebar from './sidebar/Sidebar.js';
+import RightArrow from '../img/arrow-r-line.svg';
+import LeftArrow from '../img/arrow-l-line.svg';
+import Close from '../img/icn_close.svg';
 
 import Modal from 'react-modal';
 
@@ -45,7 +48,7 @@ export default class MediumBox extends Component {
           className="Modal"
           overlayClassName="Overlay"
         >
-          <button onClick={this.handleCloseModal}>Close Modal</button>
+          <div className="button" onClick={this.handleCloseModal}><img src={Close} alt="close modal" /></div>
           <Sidebar 
             title={this.state.currentSong.title}
             artist={this.state.currentSong.artist}
@@ -70,8 +73,20 @@ export default class MediumBox extends Component {
             )
           })}
         </div>
-        <a href="/50-21">50-21</a>
-        <a href="/10-1">10-1</a>
+        <div className="page-navigation">
+          <a className="page-link-group" href="/50-21">
+            <div className="page-link">
+              <img src={LeftArrow} alt="previous page"/>
+              <p>50-21</p>
+            </div>
+          </a>
+          <a className="page-link-group" href="/10-1">
+            <div className="page-link">
+              <img src={RightArrow} alt="next page"/>
+              <p>10-1</p>
+            </div>
+          </a>
+        </div>
       </div>
     );
   }

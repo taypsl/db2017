@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+// import { Topbar } from '../img/topbar.svg';
 
 function Navbar(props) {
   return (
     <div className='Navbar'>
+        <div className="Navbar-bar"></div>
         <div className='Navbar-logo'>
-        D-BRAD'S BEST SONGS OF 2017
+        <a href='/'>D-BRAD'S BEST SONGS OF 2017</a>
         </div>
 
         <div className='Navbar-links'>

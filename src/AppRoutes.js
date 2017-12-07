@@ -6,6 +6,7 @@ import Home from './components/Home.js';
 import SmallBox from './components/SmallBox.js';
 import MediumBox from './components/MediumBox.js';
 import LargeBox from './components/LargeBox.js';
+import BurgerNavbar from './components/BurgerNavbar.js';
 
 export default class Routes extends Component {
 	render() {
@@ -14,6 +15,7 @@ export default class Routes extends Component {
 		    <div>
 		    	<div className="App">
 		    		<Navbar />
+		    		<BurgerNavbar />
 		    		<Switch>
 		    			<Route exact path="/" component={Home} />
 			    		<Route path="/50-21" component={SmallBox} />
