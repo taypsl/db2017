@@ -2,6 +2,7 @@
   "name": "db2017",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://dbradbestsongs2017.com/",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
@@ -22,6 +23,10 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build dbradbestsongs2017.com"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }

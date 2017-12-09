@@ -5,8 +5,12 @@ $white: #ffffff;
 $black: #000000;
 $light-grey: #cccccc;
 
-.App {
+body {
   background-color: $black;
+
+}
+
+.App {
   color: $white;
   font-family: $font-family-sans-serif;
   font-weight: 300;
@@ -15,17 +19,11 @@ $light-grey: #cccccc;
 .Home {
   height: 100vh;
   text-align: center;
-  // h1 {
-  //   font-family: $font-family-serif;
-  // }
 }
 
 .Home-wrapper {
   text-align: justify;
   padding: 2rem;
-  // h1 {
-  //   font-size: 2.8rem;
-  // }
   p {
     font-size: 0.9rem;
   }
@@ -49,7 +47,7 @@ a:visited, .page-links:visited {
 .page-navigation {
   display: flex;
   justify-content: space-around; 
-  width: 100vw;
+  // width: 100vw;
   text-align: center;
   padding: 2rem;
   a {
@@ -65,6 +63,24 @@ a:visited, .page-links:visited {
   }
 }
 
+.page-navigation-home {
+  display: flex;
+  justify-content: space-around; 
+  // width: 100vw;
+  text-align: center;
+  padding: 2rem;
+  a {
+    .page-link {
+      img  {
+        width: 36px;
+        height: 100%;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
 // ====================
 // navbar
 // ====================
@@ -108,7 +124,6 @@ a:visited, .page-links:visited {
 // ======================
 // burger navbar
 // ======================
-
 .Burger-navbar, .bm-burger-button {
   display: block;
 }
@@ -171,22 +186,29 @@ a:visited, .page-links:visited {
 // =============================
 .wrapper {
   margin: 0 auto;
-  // max-width: 1200px;
   padding: 0;
-
 }
 
 .responsive-image {
   max-width: 100%;
 }
 
-.box h1 {
-  position: absolute;
-  margin: 0.5rem 3rem;
-}
-
 div.box {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.box:hover {  
+  .box-number {
+    display: block;
+  }
+  cursor: pointer;
+}
+
+.box-number {
+  display: none;
+  position: absolute;
 }
 
 .small-box {
@@ -216,9 +238,8 @@ div.box {
   }
 }
 
-
 // =======================
-// Opacity Styles
+// Grid Opacity Styles
 // =======================
 .opacity {
   opacity: 0.4
@@ -328,14 +349,18 @@ div.box {
 // =======================
 // media queries =========
 // =======================
-
+// max-width
 @media screen and (max-width: 680px) {
   .Navbar {
     display: none;
   }
+  .large-box {
+    font-size: 4.5rem;
+  }
   
 }
 
+// min-width
 @media screen and (min-width: 300px) {
   .grid {
     display: flex;
@@ -347,9 +372,6 @@ div.box {
     img {
       height: 180px; 
     }
-  }
-  .box h1 {
-    margin: 0.5rem 1.5rem;
   }
   .Home-wrapper {
     padding: 6rem 3rem;
@@ -372,7 +394,7 @@ div.box {
       height: 33%;
     }
     .box h1 {
-      margin: 1.8rem 3rem;
+      // margin: 1.8rem 3rem;
     }
   }
   .medium-box {
@@ -403,7 +425,7 @@ div.box {
       height: 25%;
     }
     .box h1 {
-      margin: 1.8rem 3rem;
+      // margin: 1.8rem 3rem;
     }
   }
   .wrapper {
@@ -440,3 +462,5 @@ div.box {
     padding: 10rem 16rem;
   } 
 }
+
+

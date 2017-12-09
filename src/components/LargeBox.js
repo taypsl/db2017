@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import '../css/App.css';
 import siteData from '../data/songs10-1.json'
@@ -73,12 +74,12 @@ export default class SmallBox extends Component {
           })}
         </div>
         <div className="page-navigation">
-          <a href="/20-11">
+          <Link to="/20-11">
             <div className="page-link">
               <img src={LeftArrow} alt="previous page"/>
               <p>20-11</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     );

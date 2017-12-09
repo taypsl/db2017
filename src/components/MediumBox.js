@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import '../css/App.css';
 import Box from './Box'
@@ -74,18 +75,18 @@ export default class MediumBox extends Component {
           })}
         </div>
         <div className="page-navigation">
-          <a className="page-link-group" href="/50-21">
+          <Link className="page-link-group" to="/50-21">
             <div className="page-link">
               <img src={LeftArrow} alt="previous page"/>
               <p>50-21</p>
             </div>
-          </a>
-          <a className="page-link-group" href="/10-1">
+          </Link>
+          <Link className="page-link-group" to="/10-1">
             <div className="page-link">
               <img src={RightArrow} alt="next page"/>
               <p>10-1</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     );

@@ -1,5 +1,7 @@
+body {
+  background-color: #000000; }
+
 .App {
-  background-color: #000000;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
@@ -29,13 +31,23 @@ a:visited, .page-links:visited {
 .page-navigation {
   display: flex;
   justify-content: space-around;
-  width: 100vw;
   text-align: center;
   padding: 2rem; }
   .page-navigation a .page-link img {
     width: 36px;
     height: 100%; }
   .page-navigation a .page-link p {
+    margin: 0.5rem 0; }
+
+.page-navigation-home {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2rem; }
+  .page-navigation-home a .page-link img {
+    width: 36px;
+    height: 100%; }
+  .page-navigation-home a .page-link p {
     margin: 0.5rem 0; }
 
 .Navbar-logo a:hover {
@@ -125,12 +137,19 @@ a:visited, .page-links:visited {
 .responsive-image {
   max-width: 100%; }
 
-.box h1 {
-  position: absolute;
-  margin: 0.5rem 3rem; }
-
 div.box {
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+div.box:hover {
+  cursor: pointer; }
+  div.box:hover .box-number {
+    display: block; }
+
+.box-number {
+  display: none;
+  position: absolute; }
 
 .small-box {
   font-family: "Open Sans", sans-serif;
@@ -232,7 +251,9 @@ div.box {
 
 @media screen and (max-width: 680px) {
   .Navbar {
-    display: none; } }
+    display: none; }
+  .large-box {
+    font-size: 4.5rem; } }
 
 @media screen and (min-width: 300px) {
   .grid {
@@ -243,8 +264,6 @@ div.box {
     width: 50%; }
     .small-box img {
       height: 180px; }
-  .box h1 {
-    margin: 0.5rem 1.5rem; }
   .Home-wrapper {
     padding: 6rem 3rem; }
   .bm-burger-button {
@@ -260,8 +279,6 @@ div.box {
     width: calc(100% / 3); }
     .small-box img {
       height: 33%; }
-    .small-box .box h1 {
-      margin: 1.8rem 3rem; }
   .medium-box {
     width: 50%; }
     .medium-box img {
@@ -281,8 +298,6 @@ div.box {
     width: calc(100% / 4); }
     .small-box img {
       height: 25%; }
-    .small-box .box h1 {
-      margin: 1.8rem 3rem; }
   .wrapper {
     margin: 0; }
   .Home-wrapper {
