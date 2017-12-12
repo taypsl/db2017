@@ -45,9 +45,11 @@ a:visited, .page-links:visited {
 }
 
 .page-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around; 
-  // width: 100vw;
   text-align: center;
   padding: 2rem;
   a {
@@ -64,9 +66,11 @@ a:visited, .page-links:visited {
 }
 
 .page-navigation-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around; 
-  // width: 100vw;
   text-align: center;
   padding: 2rem;
   a {
@@ -98,10 +102,16 @@ a:visited, .page-links:visited {
     // background-color: $black;
     width: 100%;
     height: 80px;
-    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(bottom, transparent, red);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, transparent, black);
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(black));
+    background: -webkit-linear-gradient(bottom, transparent, black);
+    background: -o-linear-gradient(bottom, transparent, black);
+    background: linear-gradient(to top, transparent, black);
+    /* Standard syntax (must be last) */
   }
   .Navbar-logo {
     opacity: 1;
@@ -189,33 +199,55 @@ a:visited, .page-links:visited {
   padding: 0;
 }
 
-.responsive-image {
-  max-width: 100%;
-}
-
-div.box {
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap; 
+  flex-flow: row wrap;
+  -ms-flex-direction: row;
+  flex-direction: row; 
+  align-content: flex-start;
 }
 
-div.box:hover {  
+.grid-box {
+  font-family: $font-family-sans-serif;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center; 
+  -ms-flex-pack: center; 
+  justify-content: center; 
   .box-number {
-    display: block;
+    display: none;
+    align-self: center;
+
+    position: absolute; // this is what isnt working in safari
+    opacity: 1;
+   }
+}
+
+.box:hover {  
+  .box-number {
+    display: inline-block;
+    display: -webkit-inline-box;
   }
   cursor: pointer;
 }
 
-.box-number {
-  display: none;
-  position: absolute;
+.responsive-img {
+  flex: 0 0 100%;
 }
 
 .small-box {
-  font-family: $font-family-sans-serif;
   font-weight: 800;
   font-size: 3rem;
   // text-align: center;
+  
   img {
     height: 230px;
     width: 100%;
@@ -263,6 +295,8 @@ div.box:hover {
   opacity: 1;
   width: 320px;
   height: 100vh;
+  overflow: scroll;
+
 }
 
 .Modal:focus {
@@ -290,7 +324,6 @@ div.box:hover {
   opacity: 1;
   width: 320px;
   height: 100vh;
-  overflow: scroll;
   z-index: 2000;
 
 }
@@ -307,18 +340,24 @@ div.box:hover {
 }
 
 .song-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
 .sidebar-number {
+  -ms-flex-item-align: start;
   align-self: flex-start;
-  font-family: $font-family-sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 4rem;
 }
 
 .sidebar-title {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   margin-left: 1.3rem;
 }
@@ -362,13 +401,8 @@ div.box:hover {
 
 // min-width
 @media screen and (min-width: 300px) {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
   .small-box {
-    width: 50%;
+    width: calc((100% / 2) - 1%);
     img {
       height: 180px; 
     }
@@ -383,13 +417,8 @@ div.box:hover {
 }
 
 @media screen and (min-width: 500px) {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
   .small-box {
-    width: calc(100% / 3);
+    width: calc((100% / 3) - 1%);
     img {
       height: 33%;
     }

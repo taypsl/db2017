@@ -57,7 +57,7 @@ class SmallBox extends Component {
 	      		_id={this.state.currentSong._id}
 	      		songURL={this.state.currentSong.songURL}
 	      	/>
-	      </Modal>
+	      </Modal> 
 
         <div className="song-list grid">
           {this.state.data.songs.map((el) => {

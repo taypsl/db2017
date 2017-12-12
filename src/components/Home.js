@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Title from '../img/title.svg';
 import RightArrow from '../img/arrow-r-line.svg';
 import { Link } from 'react-router-dom';
+import '../css/App.css';
+
 
 class Home extends Component {
   render() {

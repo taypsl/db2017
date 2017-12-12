@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../css/App.css';
+
 // import { Topbar } from '../img/topbar.svg';
 
 function Navbar(props) {

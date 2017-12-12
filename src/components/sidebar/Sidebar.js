@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VideoPlayer from './Player.js';
+import '../../css/App.css';
 
 export default class Sidebar extends Component {
 
