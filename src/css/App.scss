@@ -5,8 +5,7 @@ $white: #ffffff;
 $black: #000000;
 $light-grey: #cccccc;
 
-html {
-  line-height: 0;
+img {
 }
 body {
   background-color: $black;
@@ -216,6 +215,7 @@ a:visited, .page-links:visited {
 }
 
 .box {
+    line-height: 0;
   position: relative;
   text-align: center;
   .box-number {
