@@ -1,3 +1,6 @@
+html {
+  line-height: 0; }
+
 body {
   background-color: #000000; }
 
@@ -159,11 +162,11 @@ a:visited, .page-links:visited {
   .box .box-number {
     display: none;
     opacity: 1;
-    z-index: 1000;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 1000; }
 
 .box:hover {
   cursor: pointer; }
