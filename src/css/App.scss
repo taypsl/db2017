@@ -206,9 +206,10 @@ a:visited, .page-links:visited {
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap; 
   flex-flow: row wrap;
-  -ms-flex-direction: row;
-  flex-direction: row; 
-  align-content: flex-start;
+
+  // -ms-flex-direction: row; ^
+  // flex-direction: row; ^
+  // align-content: flex-start; // still works without ^ ^ ^ 
 }
 
 .grid-box {
@@ -216,38 +217,51 @@ a:visited, .page-links:visited {
 }
 
 .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center; 
-  -ms-flex-pack: center; 
-  justify-content: center; 
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: flex;
+  // -webkit-box-pack: center; 
+  // -ms-flex-pack: center; 
+  // justify-content: center; 
+  position: relative;
+    text-align: center;
   .box-number {
     display: none;
-    align-self: center;
 
-    position: absolute; // this is what isnt working in safari
     opacity: 1;
-   }
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .responsive-img {
+    // float: left;
+  }
 }
 
 .box:hover {  
   .box-number {
-    display: inline-block;
-    display: -webkit-inline-box;
+    display: block;
+    // display: -webkit-inline-box;
+  }
+  .responsive-img {
+    // display: -webkit-inline-box;
   }
   cursor: pointer;
 }
 
 .responsive-img {
-  flex: 0 0 100%;
+  // flex: 1 0 100%; // flex: 1 0 50%
+  // flex-basis: 100%; //added
 }
 
 .small-box {
   font-weight: 800;
   font-size: 3rem;
   // text-align: center;
-  
+
   img {
     height: 230px;
     width: 100%;

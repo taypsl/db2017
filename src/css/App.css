@@ -148,35 +148,27 @@ a:visited, .page-links:visited {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  align-content: flex-start; }
+  flex-flow: row wrap; }
 
 .grid-box {
   font-family: "Open Sans", sans-serif; }
 
 .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  position: relative;
+  text-align: center; }
   .box .box-number {
     display: none;
-    align-self: center;
+    opacity: 1;
+    z-index: 1000;
     position: absolute;
-    opacity: 1; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .box:hover {
   cursor: pointer; }
   .box:hover .box-number {
-    display: inline-block;
-    display: -webkit-inline-box; }
-
-.responsive-img {
-  flex: 0 0 100%; }
+    display: block; }
 
 .small-box {
   font-weight: 800;
