@@ -20,7 +20,7 @@ function Navbar(props) {
             exact
             to='/'
           >
-            Top
+            Intro
           </NavLink>
           <NavLink
             activeClassName='Navbar-link--active'

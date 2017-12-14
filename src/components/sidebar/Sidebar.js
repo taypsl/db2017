@@ -19,7 +19,7 @@ export default class Sidebar extends Component {
         	</div>
         </div>
         <hr className="sidebar-line" />
-        <p className="sidebar-description">{this.props.description}</p>
+        <div className="sidebar-description">{this.props.description}</div>
       </div>
     );
   }

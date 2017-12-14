@@ -4,11 +4,16 @@ import LazyLoad from 'react-lazyload';
 import '../css/App.css';
 import Box from './Box'
 import siteData from '../data/songs50-21.json'
+import ReactGA from 'react-ga';
 
 import Modal from 'react-modal';
 import Sidebar from './sidebar/Sidebar.js';
 import Close from '../img/icn_close.svg';
-import RightArrow from '../img/arrow-r-line.svg';
+// import RightArrow from '../img/arrow-r-line.svg';
+import RightArrow from '../img/arrow-r_1@2x.png';
+import LeftArrow from '../img/arrow-l_1@2x.png'
+
+import ReactHtmlParser from 'react-html-parser';
 
 class SmallBox extends Component {
   constructor() {
@@ -28,6 +33,11 @@ class SmallBox extends Component {
     	showModal: true,
     	currentSong: el
     });
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Selected',
+      
+    });
   }
   
   handleCloseModal () {
@@ -39,7 +49,16 @@ class SmallBox extends Component {
     // console.log('small', this.state.data)
   }
 
+  // handleClick() {
+  //   ReactGA.event({
+  //     category: 'Navigation',
+  //     action: 'Clicked Link',
+  //   });
+  // }
+
   render() {
+    const JSONdesc = this.state.currentSong.description;
+    const newDesc = ReactHtmlParser(JSONdesc);
     return (
       <div className="wrapper">
 
@@ -53,10 +72,11 @@ class SmallBox extends Component {
 	      	<Sidebar 
 	      		title={this.state.currentSong.title}
 	      		artist={this.state.currentSong.artist}
-	      		description={this.state.currentSong.description}
+	      		description={newDesc}
 	      		_id={this.state.currentSong._id}
 	      		songURL={this.state.currentSong.songURL}
 	      	/>
+          <div className="Modal-background"></div>
 	      </Modal> 
 
         <div className="song-list grid">
@@ -75,7 +95,13 @@ class SmallBox extends Component {
           })}
         </div>
         <div className="page-navigation">
-          <Link to="/20-11">
+          <Link className="page-link-group" to="/">
+            <div className="page-link">
+              <img src={LeftArrow} alt="previous page"/>
+              <p>Top</p>
+            </div>
+          </Link>
+          <Link className="page-link-group" to="/20-11">
             <div className="page-link">
               <img src={RightArrow} alt="next page"/>
               <p>20-11</p>

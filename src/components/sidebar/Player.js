@@ -10,6 +10,7 @@ class VideoPlayer extends Component {
     		url={this.props.url}
     		width="340px"
     		height="220px"
+        controls={true}
     	/>
   	)
   }

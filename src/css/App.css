@@ -8,7 +8,8 @@ body {
 
 .Home {
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 4rem; }
 
 .Home-wrapper {
   text-align: justify;
@@ -36,11 +37,15 @@ a:visited, .page-links:visited {
   justify-content: space-around;
   text-align: center;
   padding: 2rem; }
-  .page-navigation a .page-link img {
-    width: 36px;
-    height: 100%; }
-  .page-navigation a .page-link p {
-    margin: 0.5rem 0; }
+  .page-navigation a .page-link {
+    opacity: 0.8; }
+    .page-navigation a .page-link img {
+      width: 36px;
+      height: 100%; }
+    .page-navigation a .page-link p {
+      margin: 0.5rem 0; }
+  .page-navigation a:hover .page-link {
+    opacity: 1; }
 
 .page-navigation-home {
   display: -webkit-box;
@@ -50,11 +55,15 @@ a:visited, .page-links:visited {
   justify-content: space-around;
   text-align: center;
   padding: 2rem; }
-  .page-navigation-home a .page-link img {
-    width: 36px;
-    height: 100%; }
-  .page-navigation-home a .page-link p {
-    margin: 0.5rem 0; }
+  .page-navigation-home a .page-link {
+    opacity: 0.8; }
+    .page-navigation-home a .page-link img {
+      width: 36px;
+      height: 100%; }
+    .page-navigation-home a .page-link p {
+      margin: 0.5rem 0; }
+  .page-navigation-home a:hover .page-link {
+    opacity: 1; }
 
 .Navbar-logo a:hover {
   text-decoration: none; }
@@ -164,12 +173,13 @@ a:visited, .page-links:visited {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000; }
+    z-index: 100; }
 
 .box:hover {
   cursor: pointer; }
   .box:hover .box-number {
-    display: block; }
+    display: block;
+    text-shadow: 0.5px 1px 40px #636363; }
 
 .small-box {
   font-weight: 800;
@@ -185,10 +195,15 @@ a:visited, .page-links:visited {
     width: 100%; }
 
 .large-box {
-  font-size: 8.5rem; }
+  font-size: 6.5rem;
+  text-align: left; }
   .large-box img {
-    height: 100%;
-    width: 100%; }
+    width: 100vw; }
+  .large-box .box-number {
+    margin-left: 4rem;
+    top: 25%;
+    left: 20%;
+    transform: translate(-75%, -80%); }
 
 .opacity {
   opacity: 0.4; }
@@ -201,14 +216,13 @@ a:visited, .page-links:visited {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000;
-  opacity: 1;
   width: 320px;
   height: 100vh;
   overflow: scroll; }
 
 .Modal:focus {
-  outline: 0; }
+  outline: 0;
+  opacity: 1; }
 
 .button img {
   margin-left: 1.5rem;
@@ -224,17 +238,34 @@ a:visited, .page-links:visited {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000;
-  opacity: 1;
   width: 320px;
   height: 100vh;
   z-index: 2000; }
+
+.Modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.75;
+  width: 600px;
+  height: 100vh;
+  z-index: -100; }
 
 .Sidebar {
   font-family: "Open Sans", sans-serif;
   padding: 1.5rem 1rem;
   font-size: 2rem;
-  color: #ffffff; }
+  color: #ffffff;
+  opacity: 1;
+  z-index: 100; }
+  .Sidebar a {
+    text-decoration: underline; }
+  .Sidebar a:hover {
+    color: #cccccc; }
+
+.player-container {
+  opacity: 1; }
 
 .song-title-wrapper {
   display: -webkit-box;
@@ -266,30 +297,44 @@ a:visited, .page-links:visited {
 
 .sidebar-artist {
   font-size: 1.2rem;
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 1.2rem; }
 
 .sidebar-line {
   margin-top: 0; }
 
 .sidebar-description {
-  font-size: 1rem; }
+  line-height: 1.25rem;
+  font-size: 1rem;
+  margin-bottom: 2rem; }
 
 @media screen and (max-width: 680px) {
   .Navbar {
     display: none; }
   .large-box {
-    font-size: 4.5rem; } }
+    font-size: 4.5rem; }
+  .Sidebar {
+    padding: 1.5rem 1rem; } }
 
 @media screen and (min-width: 300px) {
   .small-box {
     width: calc((100% / 2) - 1%); }
     .small-box img {
       height: 180px; }
+  .large-box {
+    font-size: 5.5rem; }
+    .large-box .box-number {
+      margin-left: 4rem;
+      top: 45%;
+      left: 20%;
+      transform: translate(-75%, -80%); }
   .Home-wrapper {
-    padding: 6rem 3rem; }
+    padding: 6rem 2.5rem 1rem 2.5rem; }
   .bm-burger-button {
     right: 3rem;
-    top: 2rem; } }
+    top: 2rem; }
+  .footer {
+    padding: 4rem 0 2rem 0; } }
 
 @media screen and (min-width: 500px) {
   .small-box {
@@ -337,3 +382,10 @@ a:visited, .page-links:visited {
       height: 17%; }
   .Home-wrapper {
     padding: 10rem 16rem; } }
+
+.footer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.7; }

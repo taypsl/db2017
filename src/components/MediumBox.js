@@ -5,10 +5,13 @@ import '../css/App.css';
 import Box from './Box'
 import siteData from '../data/songs20-11.json'
 import Sidebar from './sidebar/Sidebar.js';
-import RightArrow from '../img/arrow-r-line.svg';
-import LeftArrow from '../img/arrow-l-line.svg';
+// import RightArrow from '../img/arrow-r-line.svg';
+import RightArrow from '../img/arrow-r_1@2x.png'
+// import LeftArrow from '../img/arrow-l-line.svg';
+import LeftArrow from '../img/arrow-l_1@2x.png'
 import Close from '../img/icn_close.svg';
-
+import ReactHtmlParser from 'react-html-parser';
+import ReactGA from 'react-ga';
 import Modal from 'react-modal';
 
 export default class MediumBox extends Component {
@@ -29,6 +32,11 @@ export default class MediumBox extends Component {
       showModal: true,
       currentSong: el
     });
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Selected',
+      label: 'Medium Box'
+    });
   }
   
   handleCloseModal () {
@@ -41,6 +49,8 @@ export default class MediumBox extends Component {
   }
 
   render() {
+    const JSONdesc = this.state.currentSong.description;
+    const newDesc = ReactHtmlParser(JSONdesc);
     return (
       <div className="wrapper">
         <Modal 
@@ -53,10 +63,12 @@ export default class MediumBox extends Component {
           <Sidebar 
             title={this.state.currentSong.title}
             artist={this.state.currentSong.artist}
-            description={this.state.currentSong.description}
+            description={newDesc}
             _id={this.state.currentSong._id}
             songURL={this.state.currentSong.songURL}
-          />  
+          />
+          <div className="Modal-background"></div>
+  
         </Modal>
 
         <div className="song-list grid">

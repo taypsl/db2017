@@ -5,8 +5,11 @@ import '../css/App.css';
 import siteData from '../data/songs10-1.json'
 import Box from './Box'
 import Sidebar from './sidebar/Sidebar.js';
-import LeftArrow from '../img/arrow-l-line.svg';
+// import LeftArrow from '../img/arrow-l-line.svg';
+import LeftArrow from '../img/arrow-l_1@2x.png'
+import ReactGA from 'react-ga';
 import Close from '../img/icn_close.svg';
+import ReactHtmlParser from 'react-html-parser';
 
 import Modal from 'react-modal';
 
@@ -28,6 +31,11 @@ export default class SmallBox extends Component {
       showModal: true,
       currentSong: el
     });
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Selected',
+      label: 'Large Box'
+    });
   }
   
   handleCloseModal () {
@@ -40,6 +48,8 @@ export default class SmallBox extends Component {
   }
 
   render() {
+    const JSONdesc = this.state.currentSong.description;
+    const newDesc = ReactHtmlParser(JSONdesc);
     return (
        <div className="wrapper">
         <Modal 
@@ -52,10 +62,11 @@ export default class SmallBox extends Component {
           <Sidebar 
             title={this.state.currentSong.title}
             artist={this.state.currentSong.artist}
-            description={this.state.currentSong.description}
+            description={newDesc}
             _id={this.state.currentSong._id}
             songURL={this.state.currentSong.songURL}
           />
+          <div className="Modal-background"></div>
         </Modal>
 
         <div className="song-list grid">

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Title from '../img/title.svg';
-import RightArrow from '../img/arrow-r-line.svg';
+// import RightArrow from '../img/arrow-r-line.svg';
+import RightArrow from '../img/arrow-r_1@2x.png'
+
 import { Link } from 'react-router-dom';
 import '../css/App.css';
 import FadeIn from 'react-fade-in';
 
-const fadeDuration = 10
+// const fadeDuration = 10
 
 class Home extends Component {
+
   render() {
     return (
       <div className="Home">
