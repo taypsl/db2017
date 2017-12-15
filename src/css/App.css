@@ -117,12 +117,13 @@ a:visited, .page-links:visited {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #ffffff; }
+  background: #cccccc; }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 33px;
-  width: 33px; }
+  margin: 1rem;
+  height: 55px;
+  width: 55px; }
 
 /* Color/shape of close button cross */
 .bm-cross {
@@ -146,6 +147,15 @@ a:visited, .page-links:visited {
 /* Styling of overlay */
 .bm-overlay {
   background: black; }
+
+.menu-item {
+  font-size: 1.25rem;
+  line-height: 2.5rem; }
+
+.Burger-navbar hr {
+  margin-top: 2rem;
+  border: 0.5px solid #ffffff;
+  opacity: 0.5; }
 
 .wrapper {
   margin: 0 auto;
@@ -381,9 +391,11 @@ a:visited, .page-links:visited {
     .small-box img {
       height: 17%; }
   .Home-wrapper {
-    padding: 10rem 16rem; } }
+    padding: 20% 30%; } }
 
 .footer {
+  margin: 4rem 1rem 1rem 1rem;
+  line-height: 1rem;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   color: #ffffff;
