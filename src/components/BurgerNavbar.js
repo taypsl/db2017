@@ -13,7 +13,7 @@ class BurgerNavbar extends React.Component {
         <a id="20-11" className="menu-item" href="/20-11">20-11</a>
         <a id="10-1" className="menu-item" href="/10-1">10-1</a>
         <hr />
-        <a id="dbradmusic.com" className="menu-item" href="https://dbradmusic.com" target="_blank">dbradmusic.com</a>
+        <a id="dbradmusic.com" className="menu-item" href="https://dbradmusic.com" target="_blank" rel="noopener noreferrer">dbradmusic.com</a>
       </Menu>
     );
   }

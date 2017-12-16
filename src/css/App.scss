@@ -537,6 +537,34 @@ a:visited, .page-links:visited {
   margin-bottom: 2rem;
 }
 
+
+
+// ===========
+// footer
+// ===========
+.footer {
+  margin-left: 27%;
+  line-height: 1rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  color: $white;
+  opacity: 0.7;
+} 
+.footer-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+
+}
+.footer-links-item {
+  margin-right: 6rem;
+}
+
+.bottom-span {
+  margin: 2rem 0; 
+}
+
 // =======================
 // media queries =========
 // =======================
@@ -577,6 +605,9 @@ a:visited, .page-links:visited {
     margin-top: 1800px;
     margin-left: 0;
   }
+  .footer {
+    margin: 4rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -609,9 +640,7 @@ a:visited, .page-links:visited {
     right: 3rem;
     top: 2rem;
   }
-  .footer {
-    padding: 4rem 0 2rem 0;
-  }
+
 }
 
 @media screen and (min-width: 500px) {
@@ -683,17 +712,3 @@ a:visited, .page-links:visited {
     padding: 20% 30%;
   } 
 }
-
-// ===========
-// footer
-// ===========
-.footer {
-  margin: 4rem 1rem 1rem 1rem;
-  line-height: 1rem;
-  font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
-  // padding: 1rem; 
-  color: $white;
-  text-align: center;
-  opacity: 0.7;
-} 

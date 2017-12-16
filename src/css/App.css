@@ -397,6 +397,26 @@ a:visited, .page-links:visited {
   font-size: 1rem;
   margin-bottom: 2rem; }
 
+.footer {
+  margin-left: 27%;
+  line-height: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  opacity: 0.7; }
+
+.footer-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute; }
+
+.footer-links-item {
+  margin-right: 6rem; }
+
+.bottom-span {
+  margin: 2rem 0; }
+
 @media screen and (max-width: 680px) {
   .Navbar {
     display: none; }
@@ -421,7 +441,9 @@ a:visited, .page-links:visited {
     margin-left: 15%; }
   .img-three {
     margin-top: 1800px;
-    margin-left: 0; } }
+    margin-left: 0; }
+  .footer {
+    margin: 4rem; } }
 
 @media screen and (max-width: 800px) {
   .Body {
@@ -443,9 +465,7 @@ a:visited, .page-links:visited {
     padding: 6rem 2.5rem 1rem 2.5rem; }
   .bm-burger-button {
     right: 3rem;
-    top: 2rem; }
-  .footer {
-    padding: 4rem 0 2rem 0; } }
+    top: 2rem; } }
 
 @media screen and (min-width: 500px) {
   .small-box {
@@ -493,12 +513,3 @@ a:visited, .page-links:visited {
       height: 17%; }
   .Home-wrapper {
     padding: 20% 30%; } }
-
-.footer {
-  margin: 4rem 1rem 1rem 1rem;
-  line-height: 1rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.8rem;
-  color: #ffffff;
-  text-align: center;
-  opacity: 0.7; }

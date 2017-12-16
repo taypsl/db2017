@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Title from '../img/title.svg';
+// import Title from '../img/title.svg';
 // import RightArrow from '../img/arrow-r-line.svg';
 import RightArrow from '../img/arrow-r_1@2x.png'
 
@@ -16,8 +16,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-
-
+        <FadeIn>
         <div className="Img-float img-one">
           <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
         </div>
@@ -122,6 +121,7 @@ class Home extends Component {
           </div>
             
         </div>
+        </FadeIn>
       </div>
     );
   }
