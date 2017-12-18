@@ -113,7 +113,7 @@ class Home extends Component {
 
           <div className="page-navigation-home">
             <Link to="/50-21">
-              <div className="page-link">
+              <div className="page-link home-page-link">
                 <img src={RightArrow} alt="next page" />
                 <p>50-21</p>
               </div>

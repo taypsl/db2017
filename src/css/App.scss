@@ -5,8 +5,6 @@ $white: #ffffff;
 $black: #000000;
 $light-grey: #cccccc;
 
-img {
-}
 body {
   background-color: $black;
 
@@ -81,7 +79,7 @@ body {
 /* Images */
 .Img-float {
   position: absolute;
-  height: 100vh;
+  // height: 100vh;
   /*background: linear-gradient(
     to bottom,
     black,
@@ -98,16 +96,23 @@ body {
 }
 
 .img-one {
+  // position: relative;
+  // width: 100%
+  height: 800px;
   margin-top: 45%;
   margin-left: 17%;
+
 }
 
+
 .img-two {
+  height: 1200px;
   margin-top: 85%;
   margin-left: 75%
 }
 
 .img-three {
+  height: 2200px;
   margin-top: 136%;
   margin-left: 17%;
 }
@@ -127,7 +132,6 @@ body {
 /* navigation & links */
 /* ================== */
 a, .page-links {
-  font-family: "Open Sans", sans-serif;
   color: $white;
   text-decoration: none;
 }
@@ -169,6 +173,7 @@ a:visited, .page-links:visited {
 }
 
 .page-navigation-home {
+  font-family: $font-family-sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,28 +350,16 @@ a:visited, .page-links:visited {
     transform: translate(-50%, -50%);
     z-index: 100;
   }
-  .responsive-img {
-    // fix bottom margin? could be issue w position: relative
-  }
+
 }
 
 .box:hover {  
   .box-number {
     display: block;
     text-shadow: 0.5px 1px 40px #636363;
-    // display: -webkit-inline-box;
-  }
-  .responsive-img {
-    // display: -webkit-inline-box;
   }
   cursor: pointer;
 }
-
-.responsive-img {
-  // flex: 1 0 100%; // flex: 1 0 50%
-  // flex-basis: 100%; //added
-}
-
 .small-box {
   font-weight: 800;
   font-size: 3rem;
@@ -618,7 +611,7 @@ a:visited, .page-links:visited {
 // min-width
 @media screen and (min-width: 300px) {
   .small-box {
-    width: calc((100% / 2) - 1%);
+    width: calc((100% / 2));
     img {
       height: 180px; 
     }
@@ -645,7 +638,7 @@ a:visited, .page-links:visited {
 
 @media screen and (min-width: 500px) {
   .small-box {
-    width: calc((100% / 3) - 1%);
+    width: calc((100% / 3));
     img {
       height: 33%;
     }
