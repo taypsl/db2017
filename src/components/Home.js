@@ -20,6 +20,7 @@ class Home extends Component {
       <div className="Home">
 
         <Fade tag="div" delay={3550} duration={3000} className="Img-float img-one">
+          
           <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
         </Fade>
 
@@ -28,7 +29,7 @@ class Home extends Component {
         </Fade>
 
         <Fade tag="div" delay={200} duration={3000} className="Img-float img-three">
-            <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513372384/dbrad2017/small/best_songs_2017_yaeji.png" alt="Yaeji" />
+          <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513372384/dbrad2017/small/best_songs_2017_yaeji.png" alt="Yaeji" />
         </Fade>
 
         <div className="Body">
@@ -52,7 +53,7 @@ class Home extends Component {
             </p>
             <div className="home-image-wrapper">
               <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
-              <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+              <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513233229/dbrad2017/medium/best_songs_2017_lorde_2.jpg" alt="Lorde" />
             </div>
             <p className="Home-text">
               {`But nothing was more unexpected than the overall lukewarm reception of once-revered indie 
@@ -79,7 +80,7 @@ class Home extends Component {
                 with critics, regardless of how great the music is.`}
             </p>
             <div className="home-image-wrapper">
-              <img className="home-image image-1" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+              <img className="home-image image-1" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513372384/dbrad2017/small/best_songs_2017_yaeji.png" alt="Yaeji" />
             </div>
             <p className="Home-text">
               {`But of course, there was still an abundance of music rightly recognized -- excellent 
@@ -104,8 +105,8 @@ class Home extends Component {
 
           <Fade tag="section" delay={1000} duration={3000} className="Section-links">
             <h2>PLAYLIST LINKS</h2>
-            <p><a className="section-link" href="https://open.spotify.com/user/dbradford07/playlist/15joJn2tsZ1WnHDU6EuPZy" target="_blank" rel="noopener noreferrer">listen on SPOTIFY</a></p>
-            <p><a className="section-link" href="https://www.youtube.com/watch?v=y-JqH1M4Ya8&list=PLqpBLIvY2a6fXLC_reHyITdFDXWreKHo6" target="_blank" rel="noopener noreferrer">listen on YOUTUBE</a></p>
+            <p><a className="section-link" href="https://open.spotify.com/user/dbradford07/playlist/2D1TaklhRNx23qE39Sq21W" target="_blank" rel="noopener noreferrer">listen on SPOTIFY</a></p>
+            <p><a className="section-link" href="https://www.youtube.com/watch?v=bvmEYgFsgyg&list=PLqpBLIvY2a6cRwgX_f06bpEtEBp08F2bo" target="_blank" rel="noopener noreferrer">listen on YOUTUBE</a></p>
           </Fade>
 
           <Fade tag="section" delay={500} duration={3000} className="Section-two">
@@ -130,13 +131,13 @@ class Home extends Component {
           </Fade>
 
           <div className="home-image-wrapper wrapper-3">
-            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
-            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513372283/dbrad2017/small/best_songs_2017_kamasi_washington.jpg" alt="Kamasi Washington" />
+            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513327541/dbrad2017/small/best_songs_2017_sheer_mag.jpg" alt="Sheer Mag" />
           </div>
 
           <Fade tag="section" delay={500} duration={2000} className="Section Section-three">
             <p className="Home-text">
-              {`I’ve been compiling and writing thesel “best songs” 
+              {`I’ve been compiling and writing these “best songs” 
                 year-end lists for 12 years now, and I absolutely 
                 love it. Lists can be a reductive way of classifying 
                 music, judging certain songs as superior to others. 

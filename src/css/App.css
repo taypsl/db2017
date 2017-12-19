@@ -180,6 +180,7 @@ a:visited, .page-links:visited {
 
 .Navbar {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
   display: flex; }
@@ -541,14 +542,10 @@ a.footer-link:hover {
     width: calc(100% / 4); }
     .small-box img {
       height: 25%; }
-  .wrapper {
-    margin: 0; }
   .Home-wrapper {
     padding: 6rem 8rem; } }
 
 @media screen and (min-width: 720px) {
-  .wrapper {
-    margin: 0; }
   .Home-wrapper {
     padding: 8rem 10rem; } }
 

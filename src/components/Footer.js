@@ -7,8 +7,8 @@ export default class Footer extends React.Component {
 				<div className="footer-links-container">
 					<div className="footer-links-item listen">
 						<h4>LISTEN</h4>
-						<div className="footer-link-div"><a className="footer-link" href="https://open.spotify.com/user/dbradford07/playlist/15joJn2tsZ1WnHDU6EuPZy" target="_blank" rel="noopener noreferrer">Spotify</a></div>
-            <div className="footer-link-div"><a className="footer-link" href="https://www.youtube.com/watch?v=y-JqH1M4Ya8&list=PLqpBLIvY2a6fXLC_reHyITdFDXWreKHo6" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+						<div className="footer-link-div"><a className="footer-link" href="https://open.spotify.com/user/dbradford07/playlist/2D1TaklhRNx23qE39Sq21W" target="_blank" rel="noopener noreferrer">Spotify</a></div>
+            <div className="footer-link-div"><a className="footer-link" href="https://www.youtube.com/watch?v=bvmEYgFsgyg&list=PLqpBLIvY2a6cRwgX_f06bpEtEBp08F2bo" target="_blank" rel="noopener noreferrer">YouTube</a></div>
 					</div>
 					<div className="footer-links-item follow">
 						<h4>FOLLOW</h4>
