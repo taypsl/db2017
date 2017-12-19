@@ -50,6 +50,10 @@ class Home extends Component {
                 a whole album, Lorde and Kendrick Lamar got even better, and Harry Styles sounded like David 
                 Bowie.`}
             </p>
+            <div className="home-image-wrapper">
+              <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+              <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+            </div>
             <p className="Home-text">
               {`But nothing was more unexpected than the overall lukewarm reception of once-revered indie 
               bands. Music critics, who used to celebrated these bands, were not keen on what they had to 
@@ -60,7 +64,7 @@ class Home extends Component {
               <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=rUplxePolH4">{`good`}</a>
               {`) songs, but its pretentious and uncomfortable lyrics about Dave Longstreth’s ex-girlfriend
                were off-putting. The Real Estate album was my least favorite of theirs (though it grew on me), 
-               the Japandroids album was my least favorite of`}
+               the Japandroids album was my least favorite of `}
             <i>theirs </i> 
             {`(though it’s still pretty awesome), but neither of those bands had songs that made my top 50.`}
             </p>
@@ -74,6 +78,9 @@ class Home extends Component {
                 good all the time that they don’t have an interesting narrative that takes hold 
                 with critics, regardless of how great the music is.`}
             </p>
+            <div className="home-image-wrapper">
+              <img className="home-image image-1" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+            </div>
             <p className="Home-text">
               {`But of course, there was still an abundance of music rightly recognized -- excellent 
                 rap from Kendrick Lamar, Vince Staples, and Migos; sensational pop from Lorde, Carly 
@@ -87,8 +94,7 @@ class Home extends Component {
                 there’s the War on Drugs, who released an absolutely spectacular album, front to 
                 back.`}
             </p>
-            <p className="Home-text">
-              {`Before proceeding, endless thanks to Taylor Parsell for her incredible work on this 
+            <p className="Home-text">{`Before proceeding, endless thanks to `}<a href="http://taypsl.com" target="_blank" rel="noopener noreferrer">taypsl</a> for her incredible work on this 
                 website, which she fully conceptualized and developed. My main requests for the site 
                 were ‘easy to listen to the songs’ and ‘looks good.’ I think you’ll find that both 
                 of those requests were met.`}
@@ -120,6 +126,11 @@ class Home extends Component {
               <li>The Courtneys: <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Z8eDKxWBFwU">'Silver Velvet'</a></li>
             </Fade>
           </Fade>
+
+          <div className="home-image-wrapper wrapper-3">
+            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+            <img className="home-image image-2" src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+          </div>
 
           <Fade tag="section" delay={500} duration={2000} className="Section Section-three">
             <p className="Home-text">

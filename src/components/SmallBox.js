@@ -98,7 +98,7 @@ class SmallBox extends Component {
           <Link className="page-link-group" to="/">
             <div className="page-link">
               <img src={LeftArrow} alt="previous page"/>
-              <p>Top</p>
+              <p>Intro</p>
             </div>
           </Link>
           <Link className="page-link-group" to="/20-11">
