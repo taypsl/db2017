@@ -455,6 +455,14 @@ a:visited, .page-links:visited {
   margin-bottom: 2rem;
   text-align: center; }
 
+.footer-link-div {
+  margin-bottom: 0.7rem; }
+
+a.footer-link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #cccccc; }
+
 @media screen and (max-width: 680px) {
   .Navbar {
     display: none; }

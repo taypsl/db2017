@@ -598,6 +598,16 @@ a:visited, .page-links:visited {
   text-align: center;
 }
 
+.footer-link-div {
+  margin-bottom: 0.7rem;
+}
+
+a.footer-link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: $light-grey;
+}
+
 // =======================
 // media queries =========
 // =======================
