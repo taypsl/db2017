@@ -23,6 +23,8 @@ body {
 
 .Home-title-a {
   width: 35%; }
+  .Home-title-a img {
+    width: 100%; }
 
 .Home-title-b {
   width: 66%;
@@ -40,16 +42,27 @@ body {
   /*    background-color: rgba(0,0,0, 0.7);
 */ }
   .Home-text a {
-    text-decoration: underline; }
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #cccccc; }
   .Home-text a:hover {
-    color: #cccccc;
+    color: #ffffff;
     cursor: pointer; }
 
 .Section-links {
   display: block;
   font-size: 1.2rem;
   line-height: 0.5rem;
-  margin: 7rem; }
+  margin: 7rem 0 7rem 7rem; }
+
+.Section-two a {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #cccccc; }
+
+.Section-two a:hover {
+  color: #ffffff;
+  cursor: pointer; }
 
 .Section-three {
   margin-top: 5.5rem; }
@@ -119,6 +132,7 @@ a, .page-links {
 
 a:hover, .page-links:hover {
   text-decoration: underline;
+  text-underline-position: under;
   cursor: pointer; }
 
 a:visited, .page-links:visited {
@@ -366,7 +380,8 @@ a:visited, .page-links:visited {
   opacity: 1;
   z-index: 100; }
   .Sidebar a {
-    text-decoration: underline; }
+    text-decoration: underline;
+    text-underline-position: under; }
   .Sidebar a:hover {
     color: #cccccc; }
 
@@ -414,6 +429,11 @@ a:visited, .page-links:visited {
   font-size: 1rem;
   margin-bottom: 2rem; }
 
+.sidebar-credit {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #9e9e9e; }
+
 .footer {
   line-height: 1rem;
   font-family: "Open Sans", sans-serif;
@@ -451,7 +471,9 @@ a:visited, .page-links:visited {
   .Section {
     margin-left: 0; }
   .Section-links {
-    margin: 2rem; }
+    margin: 3rem 0 3rem 3rem; }
+    .Section-links h2 {
+      font-size: 1.5rem; }
   ul {
     -webkit-padding-start: 2rem; }
   .Section-three {

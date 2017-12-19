@@ -20,15 +20,15 @@ class Home extends Component {
       <div className="Home">
 
         <Fade tag="div" delay={3550} duration={3000} className="Img-float img-one">
-          <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_431/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
+          <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513233061/dbrad2017/medium/best_songs_2017_migos.jpg" alt="Migos" />
         </Fade>
 
         <Fade tag="div" delay={1000} duration={3000} className="Img-float img-two">
-          <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_461/v1513233229/dbrad2017/medium/best_songs_2017_lorde_2.jpg" alt="Lorde" />
+          <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513233229/dbrad2017/medium/best_songs_2017_lorde_2.jpg" alt="Lorde" />
         </Fade>
 
         <Fade tag="div" delay={200} duration={3000} className="Img-float img-three">
-            <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_scale,w_412/v1513372384/dbrad2017/small/best_songs_2017_yaeji.png" alt="Yaeji" />
+            <img src="http://res.cloudinary.com/ddvn6aemk/image/upload/c_fill,h_272,w_272/v1513372384/dbrad2017/small/best_songs_2017_yaeji.png" alt="Yaeji" />
         </Fade>
 
         <div className="Body">
@@ -59,14 +59,14 @@ class Home extends Component {
               bands. Music critics, who used to celebrated these bands, were not keen on what they had to 
               offer in 2017. The weirdest part is that oftentimes, their tepid reaction was justified! 
               Arcade Fire and the Shins released total duds. Beck’s album was vapid and the Dirty Projectors 
-              album had interesting (and even`}
+              album had interesting (and even `}
               <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=2IG5f50olZA">{`some `}</a>
               <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=rUplxePolH4">{`good`}</a>
               {`) songs, but its pretentious and uncomfortable lyrics about Dave Longstreth’s ex-girlfriend
                were off-putting. The Real Estate album was my least favorite of theirs (though it grew on me), 
                the Japandroids album was my least favorite of `}
             <i>theirs </i> 
-            {`(though it’s still pretty awesome), but neither of those bands had songs that made my top 50.`}
+            {` (though it’s still pretty awesome), but neither of those bands had songs that made my top 50.`}
             </p>
             <p className="Home-text">
               {`Some of the bands of previous stature that went unrecognized or under appreciated 
@@ -94,7 +94,8 @@ class Home extends Component {
                 there’s the War on Drugs, who released an absolutely spectacular album, front to 
                 back.`}
             </p>
-            <p className="Home-text">{`Before proceeding, endless thanks to `}<a href="http://taypsl.com" target="_blank" rel="noopener noreferrer">taypsl</a> for her incredible work on this 
+            <p className="Home-text">{`Before proceeding, endless thanks to `}<a href="http://taypsl.com" target="_blank" rel="noopener noreferrer">taypsl </a>
+              {`for her incredible work on this 
                 website, which she fully conceptualized and developed. My main requests for the site 
                 were ‘easy to listen to the songs’ and ‘looks good.’ I think you’ll find that both 
                 of those requests were met.`}
@@ -102,6 +103,7 @@ class Home extends Component {
           </Fade>
 
           <Fade tag="section" delay={1000} duration={3000} className="Section-links">
+            <h2>PLAYLIST LINKS</h2>
             <p><a className="section-link" href="https://open.spotify.com/user/dbradford07/playlist/15joJn2tsZ1WnHDU6EuPZy" target="_blank" rel="noopener noreferrer">listen on SPOTIFY</a></p>
             <p><a className="section-link" href="https://www.youtube.com/watch?v=y-JqH1M4Ya8&list=PLqpBLIvY2a6fXLC_reHyITdFDXWreKHo6" target="_blank" rel="noopener noreferrer">listen on YOUTUBE</a></p>
           </Fade>

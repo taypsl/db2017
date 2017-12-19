@@ -20,6 +20,7 @@ export default class Sidebar extends Component {
         </div>
         <hr className="sidebar-line" />
         <div className="sidebar-description">{this.props.description}</div>
+        <div className="sidebar-credit"><i>Image Credit: {this.props.photoCredit}</i></div>
       </div>
     );
   }

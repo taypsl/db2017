@@ -65,6 +65,7 @@ export default class SmallBox extends Component {
             description={newDesc}
             _id={this.state.currentSong._id}
             songURL={this.state.currentSong.songURL}
+            photoCredit={this.state.currentSong.photoCredit}
           />
           <div className="Modal-background"></div>
         </Modal>
