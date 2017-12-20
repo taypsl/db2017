@@ -75,7 +75,6 @@ body {
 /* Images */
 .Img-float {
   position: absolute;
-  overflow: scroll;
   float: left;
   z-index: -1000; }
 
